@@ -1,0 +1,20 @@
+version: 1.0
+
+input:
+  - payload
+
+tasks:
+  notify_payload:
+    action: core.echo
+    input: 
+      message: |
+        Repo change detected in github
+    next:
+      - when: <%succeeded() %>
+        do: install_packs
+
+  install_packs:
+    action: packs.install
+    input:
+      packs: ["{{ ctx().payload.repository_url }}"]
+
