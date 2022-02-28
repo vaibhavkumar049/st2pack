@@ -2,7 +2,7 @@
 ref: my_st2_pack
 name: "My Stackstorm pack"
 description: collectoin of rules and such
-version: 0.0.3
+version: 0.0.4
 author: vaibhav
 email: vaibhav.chaudhary@ivedha.com
 dependencies:
